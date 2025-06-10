@@ -2,7 +2,7 @@
 {% block content %}
 {% for i in object_list %}
 <div align="center">
-    <img src="{{i.collCover}}" height="200" width="200">
+    <img src="{{i.collCover}}" alt="images" height="200" width="200">
     <h2><a href="/genres/{{i.id}}">{{i.collName}}</a></h2>
     <h3>{{i.collDesc}}</h3><br/>
 </div>
