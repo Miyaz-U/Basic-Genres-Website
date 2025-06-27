@@ -1,21 +1,11 @@
-<!DOCTYPE html>
 {% extends 'genres/base.html' %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Genres</title>
-    </head>
-    <body>
-    {% block content %}
-        {% for j in coll.piece_set.all %}
-        <div align="center">
-            <img src="{{j.pieceCover}}" height="200" width="200">
-            <h2>{{j.title}} - {{j.artist}}</h2>
-            <h3>{{j.type}}</h3>
-            <h3>{{j.year}}</h3>
-            <br/>
-        </div>
-        {% endfor %}
-    {% endblock %}
-    </body>
-</html>
+{% block content %}
+{% for j in coll.piece_set.all %}
+<div align="center">
+    <img src="{{j.pieceCover}}" alt="image" height="200" width="200">
+    <h2>{{j.title}} - {{j.artist}}</h2>
+    <h3>{{j.type}}</h3>
+    <h3>{{j.year}}</h3><br/>
+</div>
+{% endfor %}
+{% endblock %}
